@@ -1,0 +1,6 @@
+
+from setup import ext_modules_dict, make_setup_args
+
+
+def make_ext(*args, **kwargs):
+    return ext_modules_dict['cyserver.libev']

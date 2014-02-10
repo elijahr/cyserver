@@ -1,0 +1,13 @@
+
+from setup import ext_modules_dict, make_setup_args
+
+
+def make_ext(*args, **kwargs):
+    # dependencies for pyximport - do not remove
+    import cyserver.libev
+    import cyserver.http_parser
+    import cyserver._cyserver
+    import cyserver.hmac_sha1
+    # end pyximport deps
+
+    return ext_modules_dict['cyserver.cywebsocket']
